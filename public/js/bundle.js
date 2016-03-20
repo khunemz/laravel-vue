@@ -585,7 +585,15 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 }(jQuery);
 
 },{}],2:[function(require,module,exports){
-"use strict";
+'use strict';
+
+new Vue({
+	el: '#app',
+
+	data: {
+		messages: { name: '', body: '' }
+	}
+});
 
 },{}],3:[function(require,module,exports){
 "use strict";
