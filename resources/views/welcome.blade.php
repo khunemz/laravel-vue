@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8" />
+    <title>Chutipong Roobklom Tutorial Laravel and Vue.js</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+    {!! Html::style('css/bundle.css') !!}
+</head>    
+<body>
+<div class="container">
+<div id="app">
+    <div id="panel" class="panel panel-default">
+        <div class="panel-heading">
+        <h3>ผู้เยี่ยมชม</h3>
+        <form class="form-group">
+            <div class="form-group">
+                <label>ชื่อ</label>
+                <input class="form-control"></input>
             </div>
+            <div class="form-group">
+                <label>ข้อความ</label>
+                <input class="form-control"></input>
+            </div>
+            <button class="btn btn-default btn-md">ส่ง</button>
+        </form>
         </div>
-    </body>
+    </div>
+</div>    
+</div>
+    {!! Html::script('js/jquery.js') !!}
+    {!! Html::script('js/bundle.js') !!}
+</body>
 </html>
