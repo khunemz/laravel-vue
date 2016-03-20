@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
+    <meta id="_token" value="{{ csrf_token() }}" />
     <meta charset="utf-8" />
     <title>Chutipong Roobklom Tutorial Laravel and Vue.js</title>
 
@@ -30,16 +31,18 @@
         <article v-for="message in messages">
             <h4>@{{ message.name }}</h4>
             <div class="body">
-                @{{ message.body }}
+                @{{ message.message }}
             </div>
         </article>
         <pre>@{{ $data | json }}</pre>
     </div>   
 </div>
 
-</div><!-- /#app -->    
+</div><!-- /#app -->   
 </div><!-- /.container -->
     {!! Html::script('js/jquery.js') !!}
+    {!! Html::script('js/vue.js') !!}
+    {!! Html::script('js/vue-resource.min.js') !!}
     {!! Html::script('js/bundle.js') !!}
 </body>
 </html>
