@@ -10,6 +10,11 @@ body {
 #panel .form-control{
 	max-width: 500px;
 }
+
+#panel .error {
+	color: red;
+	font-weight: bold;
+}
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.

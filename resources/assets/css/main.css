@@ -10,3 +10,8 @@ body {
 #panel .form-control{
 	max-width: 500px;
 }
+
+#panel .error {
+	color: red;
+	font-weight: bold;
+}

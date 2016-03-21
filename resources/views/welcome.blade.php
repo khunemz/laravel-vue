@@ -14,17 +14,24 @@
 <div id="panel" class="panel panel-default">
     <div class="panel-heading">
         <h3>ผู้เยี่ยมชม</h3>
-        <form class="form-group">
+        <form class="form-group" novalidate>
             <div class="form-group">
-                <label>ชื่อ</label>
-                <input class="form-control"></input>
+                <label>
+                    ชื่อ
+                </label>
+                <input id="name" class="form-control" 
+                v-model="newMessage.name"
+                />
             </div>
             <div class="form-group">
                 <label>ข้อความ</label>
-                <input class="form-control"></input>
+                <input class="form-control" 
+                v-model="newMessage.message"
+                />
             </div>
-            <button class="btn btn-default btn-md">ส่ง</button>
+            <button class="btn btn-default btn-md" :disabled="true" >ส่ง</button>
         </form>
+        </validator>
     </div> 
 
     <div class="panel-body">

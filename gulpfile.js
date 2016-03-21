@@ -10,6 +10,7 @@ elixir(function(mix) {
 
     mix.browserify([
     	'main.js', 
-    	'bootstrap.min.js'], 
+    	'bootstrap.min.js',
+    	'vue-validator.js'], 
     	'public/js/bundle.js');
 });
