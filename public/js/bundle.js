@@ -594,7 +594,8 @@ new Vue({
 
 	data: {
 		messages: {},
-		newMessage: { name: '', message: '' }
+		newMessage: { name: '', message: '' },
+		submitted: false
 	},
 
 	computed: {
@@ -617,10 +618,14 @@ new Vue({
 			});
 		},
 
-		postMessage: function postMessage(newMessage) {
-			this.$http.post('api/messages', newMessage).then(function (response) {
-				this.messages = response.data;
-			});
+		onSubmitForm: function onSubmitForm(e) {
+			e.preventDefault();
+			var message = this.newMessage;
+			this.messages.push(message);
+			this.newMessage = { name: '', message: '' };
+			this.submitted = true;
+			//send POST ajax request
+			this.$http.post('api/messages', message);
 		}
 	}
 });

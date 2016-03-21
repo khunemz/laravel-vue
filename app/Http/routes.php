@@ -4,14 +4,13 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => ['web']], function () {
-	//
-});
-    
-Route::get('api/messages', function(){
-	return App\Message::all();
-});
 
-Route::post('api/messages', function(Request $request){
-	return App\Message::create($request->all());
 });
+	Route::get('api/messages', function(){
+	return App\Message::all();
+	});
+    
+	Route::post('api/messages', function(){
+		return App\Message::create(Request::all());
+	});
 
